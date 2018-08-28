@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lauseen tulostus</title>
+</head>
+<body>
+    <h1>Kirjoita lause</h1>
+    Lause: <input id="lause"/> <br/>
+    <button type="button" onclick="tulostaLause();">Paina</button>
+    <br/><br/>
+    Lauseesi: 
+    <br/><br/>
+    <div id="laatikko">
+    </div>
+    <script>
+        function tulostaLause(){
+            var lause = document.getElementById("lause").value;
+            document.getElementById("laatikko").innerHTML = lause;
+        }
+     </script>
+</body>
+</html>
