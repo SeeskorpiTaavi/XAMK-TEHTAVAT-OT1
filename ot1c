@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pakettilaskuri</title>
 </head>
 <body>
+    <h1>PC-pakettilaskuri</h1>
+        Emolevy: <input id="luku_1"/> € <br/>
+        Prosessori: <input id="luku_2"/> € <br/>
+        Muisti: <input id="luku_3"/> € <br/>
+        Kiintolevy: <input id="luku_4"/> € <br/>
+        Kotelo: <input id="luku_5"/> € <br/>
+        Näytönohjain: <input id="luku_6"/> € <br/>
+        Virtalähde: <input id="luku_7"/> € <br/>
     
+<button type="button" onclick="yhteenLaske();">Laske osat yhteen: </button>
+<br/><br/>
+<div id="paketti">
+
+</div>
+
+    <script>
+        function yhteenLaske(){
+            var Emolevy = Number(document.getElementById("luku_1").value);
+            var Prosessori = Number(document.getElementById("luku_2").value);
+            var Muisti = Number(document.getElementById("luku_3").value);
+            var Kiintolevy = Number(document.getElementById("luku_4").value);
+            var Kotelo = Number(document.getElementById("luku_5").value);
+            var Näytönohjain = Number(document.getElementById("luku_6").value);
+            var Virtalähde = Number(document.getElementById("luku_7").value);
+        
+            var laske = Emolevy + Prosessori + Muisti + Kiintolevy + Kotelo + Näytönohjain + Virtalähde;
+
+            document.getElementById("paketti").innerHTML = laske;
+        }
+
+    </script>
 </body>
 </html>
